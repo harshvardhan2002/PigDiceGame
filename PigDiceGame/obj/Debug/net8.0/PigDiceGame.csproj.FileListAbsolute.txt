@@ -1,0 +1,14 @@
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\bin\Debug\net8.0\PigDiceGame.exe
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\bin\Debug\net8.0\PigDiceGame.deps.json
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\bin\Debug\net8.0\PigDiceGame.runtimeconfig.json
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\bin\Debug\net8.0\PigDiceGame.dll
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\bin\Debug\net8.0\PigDiceGame.pdb
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\obj\Debug\net8.0\PigDiceGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\obj\Debug\net8.0\PigDiceGame.AssemblyInfoInputs.cache
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\obj\Debug\net8.0\PigDiceGame.AssemblyInfo.cs
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\obj\Debug\net8.0\PigDiceGame.csproj.CoreCompileInputs.cache
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\obj\Debug\net8.0\PigDiceGame.dll
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\obj\Debug\net8.0\refint\PigDiceGame.dll
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\obj\Debug\net8.0\PigDiceGame.pdb
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\obj\Debug\net8.0\PigDiceGame.genruntimeconfig.cache
+C:\Users\Harshvardhan Gupta\source\repos\PigDiceGame\obj\Debug\net8.0\ref\PigDiceGame.dll
