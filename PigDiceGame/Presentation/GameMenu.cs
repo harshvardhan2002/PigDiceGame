@@ -49,8 +49,16 @@ namespace PigDiceGame.Presentation
                             break;
 
                         case "h":
-                            string holdResult = gameManager.Hold();
-                            Console.WriteLine(holdResult);
+                            var holdResult = gameManager.Hold();
+                            Console.WriteLine(holdResult.result);
+
+                            if (holdResult.isWin)
+                            {
+                                Console.WriteLine($"You Win! You finished in {turnCount} turns!");
+                                Console.WriteLine("Game over!");
+                                return;
+                            }
+
                             turnCount++;
                             break;
 
