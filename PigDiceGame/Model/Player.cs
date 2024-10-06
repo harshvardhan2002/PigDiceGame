@@ -36,10 +36,7 @@ namespace PigDiceGame.Model
             CurrentTurnScore = score;
         }
 
-        public void SetTurnActive(bool isActive)
-        {
-            // Not used; turn logic is handled in GameManager
-        }
+        
 
         public int GetTotalScore()
         {
