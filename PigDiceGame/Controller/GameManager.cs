@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace PigDiceGame.Controller
 {
 
-    internal class GameManager
+    public class GameManager
     {
         private int currentTurnScore;
         private int totalScore;
@@ -36,12 +36,12 @@ namespace PigDiceGame.Controller
             }
         }
 
-        public string Hold()
+        public (string result, bool isWin) Hold()
         {
             totalScore += currentTurnScore;
             string result = $"Your turn score is {currentTurnScore} and your total score is {totalScore}";
             currentTurnScore = 0;
-            return result;
+            return (result, GameWon());
         }
 
         public int GetCurrentTurnScore() => currentTurnScore;
