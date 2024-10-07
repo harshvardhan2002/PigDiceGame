@@ -1,4 +1,4 @@
-﻿using PigDiceGame.Model;
+using PigDiceGame.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,17 +7,19 @@ using System.Threading.Tasks;
 
 namespace PigDiceGame.Controller
 {
-
-    public class GameManager
+    
+    internal class GameManager
     {
-        private int currentTurnScore;
-        private int totalScore;
-        private Random random;
+        
+        const int DEFAULT_TARGET = 20;
+        const int DEFAULT_START_SCORE=0;
+        const int DEFAULT_TOTAL=0;
+        Random random;
+        Player player;
 
         public GameManager()
         {
-            currentTurnScore = 0;
-            totalScore = 0;
+            player = new Player();
             random = new Random();
         }
 
@@ -26,27 +28,37 @@ namespace PigDiceGame.Controller
             int roll = random.Next(1, 7);
             if (roll == 1)
             {
-                currentTurnScore = 0;
+                player.ResetCurrentTurnScore();
                 return "You rolled: 1\nTurn over. No Score";
             }
             else
             {
-                currentTurnScore += roll;
+                player.AddToCurrentTurnScore(roll);
                 return $"You rolled: {roll}";
             }
         }
 
-        public (string result, bool isWin) Hold()
+        public string Hold()
         {
-            totalScore += currentTurnScore;
-            string result = $"Your turn score is {currentTurnScore} and your total score is {totalScore}";
-            currentTurnScore = 0;
-            return (result, GameWon());
+            player.AddToTotalScore();
+            return "Your turn score is now 0 and your total score is " + player.TotalScore;
         }
 
-        public int GetCurrentTurnScore() => currentTurnScore;
-        public int GetTotalScore() => totalScore;
-        public bool GameWon() => totalScore >= 20;
+        public int GetCurrentTurnScore()
+        {
+            return player.CurrentTurnScore;
+        }
+        public int GetTotalScore()
+        {
+            return player.TotalScore;
+        }
+        public bool GameWon()
+        {
+            int targetScore = DEFAULT_TARGET;
+            if(player.TotalScore>targetScore)
+                return true;
+            return false;
+        } 
     }
 }
 
