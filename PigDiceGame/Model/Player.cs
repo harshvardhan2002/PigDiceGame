@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,20 +10,21 @@ namespace PigDiceGame.Model
     {
         public string PlayerName { get; set; }
         public int TotalScore { get; private set; }
-        public int CurrentTurnScore { get; private set; }
-        public int TurnCount { get; private set; }
-
+        public int CurrentTurnScore { get; set; }
+        const int DEFAULT_TOTAL = 0;
+        const int DEFAULT_SCORE = 0;
         public Player()
         {
-            PlayerName = "Player"; // Default name
-            TotalScore = 0;
-            CurrentTurnScore = 0;
-            TurnCount = 0; // Initializing TurnCount
+            PlayerName = "Harshvardhan Gupta";
+            TotalScore = DEFAULT_TOTAL;
+            CurrentTurnScore = DEFAULT_SCORE;
+            
         }
 
-        public void AddToTotalScore(int score)
+        public void AddToTotalScore()
         {
-            TotalScore += score;
+            TotalScore += CurrentTurnScore;
+            ResetCurrentTurnScore();
         }
 
         public void AddToCurrentTurnScore(int score)
@@ -31,21 +32,11 @@ namespace PigDiceGame.Model
             CurrentTurnScore += score;
         }
 
-        public void SetCurrentTurnScore(int score)
-        {
-            CurrentTurnScore = score;
-        }
-
         
 
-        public int GetTotalScore()
+        public void ResetCurrentTurnScore()
         {
-            return TotalScore;
-        }
-
-        public int GetCurrentTurnScore()
-        {
-            return CurrentTurnScore;
+            CurrentTurnScore=DEFAULT_SCORE;
         }
     }
 }
